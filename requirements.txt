@@ -1,0 +1,8 @@
+uv 
+jupyter
+matplotlib
+numpy
+pandas
+torch
+dm-control
+gym
