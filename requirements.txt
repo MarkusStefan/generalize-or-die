@@ -4,5 +4,8 @@ matplotlib
 numpy
 pandas
 torch
-dm-control
-gym
+torchviz
+gymnasium
+engression
+stable-baselines3
+# dm-control

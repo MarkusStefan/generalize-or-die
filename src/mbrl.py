@@ -1,19 +1,30 @@
+'''Model-Based RL algorithms'''
 
+from abc import ABC, abstractmethod
 
-
-
-
-
-class MBRLAlgorithm():
+class MBRLAlgorithm(ABC):
     '''
     Base class for Model-Based Reinforcement Learning algorithms.
     '''
     def __init__(self):
         pass
 
+    @abstractmethod
+    def train(self):
+        pass
+
+    @abstractmethod
+    def evaluate(self):
+        pass
+
+    @abstractmethod
+    def plan(self):
+        pass
 
 
-class Dyna(MBRLAlgorithm):
+
+
+class DynaQPlus(MBRLAlgorithm):
     '''
     Integrates model learning, planning, and policy learning.
     Uses the learned model to generate synthetic experiences to augment real experiences.
@@ -42,6 +53,7 @@ class Dreamer(MBRLAlgorithm):
     Uses a world model to learn a compact representation of the environment, 
     enabling planning and policy learning in the latent space.
     -- Probably overkill due to resource requirements (GPU, TPU with >16GB RAM) --
+    -- DO NOT IMPLEMENT FOR NOW --
     '''
     def __init__(self):
         super().__init__()
